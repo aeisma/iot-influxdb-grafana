@@ -18,6 +18,7 @@
 adduser grafana root
 chmod 775 $GF_PATHS_VOLUME
 su -s /bin/bash -c "mkdir -p $GF_PATHS_DATA $GF_PATHS_PLUGINS" grafana
+su -s /bin/bash -c "chmod 777 $GF_PATHS_PLUGINS" grafana
 chmod 755 $GF_PATHS_VOLUME
 deluser grafana root
 chown -R grafana:grafana "$GF_PATHS_LOGS"
